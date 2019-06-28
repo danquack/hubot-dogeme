@@ -1,22 +1,36 @@
 {
     "name": "hubot-dogeme",
     "version": "1.0.0",
-
     "description": "Wow. Such Doge",
-    "keywords": [ "doge", "hubot", "hubot-scripts", "meme" ],
-
+    "keywords": [
+        "doge",
+        "hubot",
+        "hubot-scripts",
+        "meme"
+    ],
     "author": "Rowan Manning (http://rowanmanning.com/)",
-
     "repository": {
         "type": "git",
         "url": "https://github.com/rowanmanning/hubot-dogeme.git"
     },
     "homepage": "https://github.com/rowanmanning/hubot-dogeme",
     "bugs": "https://github.com/rowanmanning/hubot-dogeme/issues",
-
-    "dependencies": {
-        "coffee-script": "~1.6"
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "coffee-script": "^1.12.7",
+        "grunt": "^1.0.3",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-mocha-test": "^0.13.3",
+        "hubot-test-helper": "^1.9.0",
+        "matchdep": "^2.0.0",
+        "mocha": "^5.2.0",
+        "sinon": "^7.3.2",
+        "sinon-chai": "^3.3.0",
+        "co": "^4.6.0"
     },
-
-    "main": "./index.coffee"
+    "main": "./index.coffee",
+    "scripts": {
+        "test": "grunt test"
+    }
 }
