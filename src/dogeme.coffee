@@ -47,13 +47,11 @@ module.exports = (robot) ->
           msg.send JSON.parse(body).url
 
   robot.respond /what doge breeds/i, (msg) ->
-    count = msg.match[2] || 5
-    breed = msg.match[1]
-    for x in [1..count]
-      msg.http("https://dogs.vakar.io/breed/")
+    msg.http("https://dogs.vakar.io/breed/")
         .get() (err, res, body) ->
           breeds = JSON.parse(body).breeds
           msg.send breeds.join(", ")
+      
 
   robot.respond /how many doges?/i, (msg) ->
     msg.http("http://dogeme.rowanmanning.com/count")
