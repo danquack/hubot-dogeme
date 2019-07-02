@@ -8,13 +8,13 @@
         "hubot-scripts",
         "meme"
     ],
-    "author": "Rowan Manning (http://rowanmanning.com/)",
+    "author": "Dan Quackenbush",
     "repository": {
         "type": "git",
-        "url": "https://github.com/rowanmanning/hubot-dogeme.git"
+        "url": "https://github.com/danquack/hubot-dogeme.git"
     },
-    "homepage": "https://github.com/rowanmanning/hubot-dogeme",
-    "bugs": "https://github.com/rowanmanning/hubot-dogeme/issues",
+    "homepage": "https://github.com/danquack/hubot-dogeme",
+    "bugs": "https://github.com/danquack/hubot-dogeme/issues",
     "devDependencies": {
         "chai": "^4.1.2",
         "coffee-script": "^1.12.7",
