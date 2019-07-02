@@ -1,0 +1,11 @@
+language: node_js
+script:
+- npm install
+- npm test || npm test
+deploy:
+  provider: npm
+  email: dlq8206@rit.edu
+  api_key:
+    secure: uhIi1eC5jNzRb9a0GONbGYslNPmNMPMZ/FCvfGFPnjXVLVJ6x6z+74ooyJ58ZZkE26LtGUNB829gUfarvee+Ereu0y22mq26qn/fEvuvvimpNUIJM+Y/yl45fbb7U/jhfwC4q7TZe/dfi9woKuckvm8zGWktISR0Lqz5itwUlfRZCeW/vqoa+j/+2JTnFswbbXoN7EAqecVPaLkn0gdooAWMLXfYnSSb96k+QzljOz5SltEnxoa+z28CzTU/4KsZRN89F1FU9BjASxtPrPPi0ARcOC4VzODFOSmDwCpzdHxc5wnYFNlLDXGwNN3os+DTwItjPtkEuPqhFR99VYKJaKyDhxbVgVHkju3KuMKKEkdNHB+Bk+869npZPuGcf3ansSbz43gOkY7GmkwLyq6I2+EBHp/gfzBceF+7y5/fq3pveA8z8whC0zO+m9eabIvNbklm/xWTvVvmZctoM2Oto/oJ4knsbBwBw+fo667ObCZBSm7FTkunOwwb/YcdCvflelrOhVMNzpo7oMhoN52ieOyz+8OaDCE3TpsaDkXE7LakfaXnRXcPoFba/PSE+e91NUKA6dnlN6ozOtxf6EvssFlB96DtgIYfSLSXN1z4ZNFiniml8YFDsoSBuIB10DXgeNkiKydu/y5VqQNeOvgKprECDSAPo0h+kWf3eMTRuyY=
+  on:
+    repo: danquack/hubot-dogeme

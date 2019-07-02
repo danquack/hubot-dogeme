@@ -1,9 +1,9 @@
 Helper = require('hubot-test-helper')
-helper = new Helper('../src/dogeme.coffee')
+helper = new Helper('../src/dogme.coffee')
 co     = require('co')
 expect = require('chai').expect
 
-describe 'hubot-dogeme', ->
+describe 'hubot-dogme', ->
 
   beforeEach ->
     @room = helper.createRoom()
@@ -11,10 +11,10 @@ describe 'hubot-dogeme', ->
   afterEach ->
     @room.destroy()
 
-  context 'user says doge me to hubot', ->
+  context 'user says dog me to hubot', ->
     beforeEach ->
       co =>
-        yield @room.user.say 'alice', '@hubot doge me'
+        yield @room.user.say 'alice', '@hubot dog me'
         yield new Promise((resolve, reject) ->
             setTimeout(resolve, 1900);
         )
@@ -22,10 +22,10 @@ describe 'hubot-dogeme', ->
     it 'should contain a url', ->
       expect(@room.messages[1][1]).to.contain('https://')
 
-  context 'user says labradore doge me to hubot', ->
+  context 'user says labradore dog me to hubot', ->
     beforeEach ->
       co =>
-        yield @room.user.say 'alice', '@hubot labrador doge me'
+        yield @room.user.say 'alice', '@hubot labrador dog me'
         yield new Promise((resolve, reject) ->
             setTimeout(resolve, 1900);
         )
@@ -34,10 +34,10 @@ describe 'hubot-dogeme', ->
         expect(@room.messages[1][1]).to.contain('labrador')
 
 
-  context 'user says doge bomb to hubot', ->
+  context 'user says dog bomb to hubot', ->
     beforeEach ->
       co =>
-        yield @room.user.say 'alice', '@hubot doge bomb 2 - Many Doges. Such exploshun'
+        yield @room.user.say 'alice', '@hubot dog bomb 2 - Many Doges. Such exploshun'
         yield new Promise((resolve, reject) ->
             setTimeout(resolve, 1900);
         )
@@ -45,10 +45,10 @@ describe 'hubot-dogeme', ->
     it 'should reply with 3', ->
         expect(@room.messages.length).to.equal(2 + 1)
 
-  context 'user says labradore doge bomb 3 to hubot', ->
+  context 'user says labradore dog bomb 3 to hubot', ->
     beforeEach ->
       co =>
-        yield @room.user.say 'alice', '@hubot labrador doge bomb 3'
+        yield @room.user.say 'alice', '@hubot labrador dog bomb 3'
         yield new Promise((resolve, reject) ->
             setTimeout(resolve, 1950);
         )
@@ -61,7 +61,7 @@ describe 'hubot-dogeme', ->
   context 'user ask what breeds to hubot', ->
     beforeEach ->
       co =>
-        yield @room.user.say 'alice', '@hubot what doge breeds'
+        yield @room.user.say 'alice', '@hubot what dog breeds'
         yield new Promise((resolve, reject) ->
             setTimeout(resolve, 1900);
         )
