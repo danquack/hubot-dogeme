@@ -1,7 +1,9 @@
 language: node_js
+node_js:
+  - "10"
 script:
-- npm install
-- npm test || npm test
+  - npm install
+  - npm test || npm test
 deploy:
   provider: npm
   email: dlq8206@rit.edu
